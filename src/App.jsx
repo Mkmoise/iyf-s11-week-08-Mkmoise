@@ -1,3 +1,6 @@
+import Header from "./components/Header";
+
+
 function App() {
   const today = new Date().toDateString();
   const hour = new Date().getHours();
