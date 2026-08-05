@@ -17,6 +17,7 @@ function App() {
 
   return (
     <div>
+      <Header/>
       <h1>Moise Nyarugabo</h1>
 
       <p>I am a beginner learning React.</p>
