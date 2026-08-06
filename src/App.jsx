@@ -19,8 +19,6 @@ function App() {
     greeting = "Good Evening!";
   }
 
-  <PostCard/>
-  <Button/>
   return (
     <div>
       <Header/>
@@ -38,6 +36,8 @@ function App() {
 
       <h2>{greeting}</h2>
 
+      <PostCard/>
+      <Button/>
       <Footer/>
     </div>
   );
