@@ -48,6 +48,10 @@ const isLoggedIn = true;
 const [count, setCount] = useState(0);
 const [isOn, setIsOn] = useState(false);
 
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [age, setAge] = useState(0);
+
   return (
  
    <Layout>
