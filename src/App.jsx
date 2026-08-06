@@ -1,11 +1,9 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import PostCard from "./components/PostCard";
 import Button from "./components/Button";
 import Card from "./components/Card";
 import Layout from "./components/Layout";
-
+import UserGreeting from "./components/UserGreeting";
 
 function App() {
   const today = new Date().toDateString();
@@ -45,11 +43,16 @@ const posts = [
   }
 ];
 
+const isLoggedIn = true;
 
   return (
  
    <Layout>
 
+     {isLoggedIn && <p>Welcome back!</p>}
+     <p>{isLoggedIn ? "Logged In" : "Please Log In"}</p>
+     <UserGreeting user={{ name: "Moise" }} />
+    
       <Sidebar/>
       <h1>Moise Nyarugabo</h1>
 
@@ -80,8 +83,8 @@ const posts = [
   <p>This is my first React Card component.</p>
 </Card>
       <Button/>
-    
-    <Layout/>
+      </Layout>    
+
   );
 }
 
