@@ -30,6 +30,8 @@ function App() {
       <p>{today}</p>
 
       <h2>{greeting}</h2>
+
+      <Footer/>
     </div>
   );
 }
