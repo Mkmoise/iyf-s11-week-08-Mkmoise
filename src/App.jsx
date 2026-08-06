@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-
+import PostCard from "./components/PostCard";
 
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
     greeting = "Good Evening!";
   }
 
+  <PostCard/>
   return (
     <div>
       <Header/>
