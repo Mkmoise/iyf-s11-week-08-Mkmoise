@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import PostCard from "./components/PostCard";
 import Button from "./components/Button";
 import Card from "./components/Card";
+import Layout from "./components/Layout";
 
 
 function App() {
@@ -46,8 +47,9 @@ const posts = [
 
 
   return (
-    <div>
-      <Header/>
+ 
+   <Layout>
+
       <Sidebar/>
       <h1>Moise Nyarugabo</h1>
 
@@ -78,8 +80,8 @@ const posts = [
   <p>This is my first React Card component.</p>
 </Card>
       <Button/>
-      <Footer/>
-    </div>
+    
+    <Layout/>
   );
 }
 
