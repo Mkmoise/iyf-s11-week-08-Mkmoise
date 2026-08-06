@@ -76,6 +76,15 @@ const [age, setAge] = useState(0);
   Toggle
 </button>
 
+<h2>User Form</h2>
+
+<input
+  type="text"
+  placeholder="Enter your name"
+  value={name}
+  onChange={(e) => setName(e.target.value)}
+/>
+
      {isLoggedIn && <p>Welcome back!</p>}
      <p>{isLoggedIn ? "Logged In" : "Please Log In"}</p>
      <UserGreeting user={{ name: "Moise" }} />
