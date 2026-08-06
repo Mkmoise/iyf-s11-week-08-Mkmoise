@@ -1,5 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Sidebar from "./components/Sidebar";
+
+
 
 function App() {
   const today = new Date().toDateString();
@@ -18,6 +21,7 @@ function App() {
   return (
     <div>
       <Header/>
+      <Sidebar/>
       <h1>Moise Nyarugabo</h1>
 
       <p>I am a beginner learning React.</p>
