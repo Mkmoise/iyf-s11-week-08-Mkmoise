@@ -36,7 +36,12 @@ function App() {
 
       <h2>{greeting}</h2>
 
-      <PostCard/>
+      <PostCard
+  title="Getting Started with React"
+  excerpt="React helps build modern user interfaces."
+  author="Moise Nyarugabo"
+  date="August 2026"
+/>
       <Button/>
       <Footer/>
     </div>
