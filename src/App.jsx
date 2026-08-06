@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import PostCard from "./components/PostCard";
 import Button from "./components/Button";
+import Card from "./components/Card";
 
 
 function App() {
@@ -73,6 +74,9 @@ const posts = [
   ))}
 </div>      
 
+      <Card title="Welcome">
+  <p>This is my first React Card component.</p>
+</Card>
       <Button/>
       <Footer/>
     </div>
