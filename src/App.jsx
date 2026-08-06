@@ -46,6 +46,7 @@ const posts = [
 
 const isLoggedIn = true;
 const [count, setCount] = useState(0);
+const [isOn, setIsOn] = useState(false);
 
   return (
  
@@ -61,6 +62,14 @@ const [count, setCount] = useState(0);
 
 <button onClick={() => setCount(0)}>
   Reset
+</button>
+
+<h2>Toggle Switch</h2>
+
+<p>The switch is {isOn ? "ON" : "OFF"}</p>
+
+<button onClick={() => setIsOn(!isOn)}>
+  Toggle
 </button>
 
      {isLoggedIn && <p>Welcome back!</p>}
