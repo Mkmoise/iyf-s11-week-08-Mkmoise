@@ -85,6 +85,26 @@ const [age, setAge] = useState(0);
   onChange={(e) => setName(e.target.value)}
 />
 
+<p>Your name is: {name}</p>
+
+<input
+  type="email"
+  placeholder="Enter your email"
+  value={email}
+  onChange={(e) => setEmail(e.target.value)}
+/>
+
+<p>Your email is: {email}</p>
+
+<input
+  type="number"
+  placeholder="Enter your age"
+  value={age}
+  onChange={(e) => setAge(Number(e.target.value))}
+/>
+
+<p>Your age is: {age}</p>
+
      {isLoggedIn && <p>Welcome back!</p>}
      <p>{isLoggedIn ? "Logged In" : "Please Log In"}</p>
      <UserGreeting user={{ name: "Moise" }} />
