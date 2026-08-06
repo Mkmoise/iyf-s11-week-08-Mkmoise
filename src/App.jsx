@@ -19,6 +19,31 @@ function App() {
     greeting = "Good Evening!";
   }
 
+const posts = [
+  {
+    id: 1,
+    title: "Getting Started with React",
+    excerpt: "Learning React step by step.",
+    author: "Moise",
+    date: "Aug 2026"
+  },
+  {
+    id: 2,
+    title: "JavaScript Basics",
+    excerpt: "JavaScript is the foundation of React.",
+    author: "Moise",
+    date: "Aug 2026"
+  },
+  {
+    id: 3,
+    title: "My Programming Journey",
+    excerpt: "Every project helps me improve.",
+    author: "Moise",
+    date: "Aug 2026"
+  }
+];
+
+
   return (
     <div>
       <Header/>
@@ -36,12 +61,18 @@ function App() {
 
       <h2>{greeting}</h2>
 
-      <PostCard
-  title="Getting Started with React"
-  excerpt="React helps build modern user interfaces."
-  author="Moise Nyarugabo"
-  date="August 2026"
-/>
+      <div>
+  {posts.map((post) => (
+    <PostCard
+      key={post.id}
+      title={post.title}
+      excerpt={post.excerpt}
+      author={post.author}
+      date={post.date}
+    />
+  ))}
+</div>      
+
       <Button/>
       <Footer/>
     </div>
