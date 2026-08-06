@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import PostCard from "./components/PostCard";
+import Button from "./components/Button";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   }
 
   <PostCard/>
+  <Button/>
   return (
     <div>
       <Header/>
