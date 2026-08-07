@@ -52,6 +52,15 @@ const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [age, setAge] = useState(0);
 
+const handleClick = () => {
+  console.log("Button clicked!");
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log("Form submitted!");
+};
+
   return (
  
    <Layout>
@@ -68,6 +77,10 @@ const [age, setAge] = useState(0);
   Reset
 </button>
 
+<button onClick={handleClick}>
+  Click Me
+</button>
+
 <h2>Toggle Switch</h2>
 
 <p>The switch is {isOn ? "ON" : "OFF"}</p>
@@ -78,6 +91,7 @@ const [age, setAge] = useState(0);
 
 <h2>User Form</h2>
 
+<form onSubmit={handleSubmit}>
 <input
   type="text"
   placeholder="Enter your name"
@@ -104,6 +118,10 @@ const [age, setAge] = useState(0);
 />
 
 <p>Your age is: {age}</p>
+
+<button type="submit">Submit</button>
+
+</form>
 
      {isLoggedIn && <p>Welcome back!</p>}
      <p>{isLoggedIn ? "Logged In" : "Please Log In"}</p>
