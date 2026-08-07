@@ -22,7 +22,7 @@ function App() {
     greeting = "Good Evening!";
   }
 
-const posts = [
+const [posts, setPosts] = useState([
   {
     id: 1,
     title: "Getting Started with React",
@@ -44,7 +44,7 @@ const posts = [
     author: "Moise",
     date: "Aug 2026"
   }
-];
+]);
 
 const isLoggedIn = true;
 const [count, setCount] = useState(0);
