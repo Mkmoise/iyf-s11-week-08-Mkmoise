@@ -28,6 +28,16 @@ const deleteTodo = (id) => {
   setTodos(todos.filter((todo) => todo.id !== id));
 };
 
+const toggleTodo = (id) => {
+  setTodos(
+    todos.map((todo) =>
+      todo.id === id
+        ? { ...todo, completed: !todo.completed }
+        : todo
+    )
+  );
+};
+
   return (
     <div>
       <h2>Todo List</h2>
@@ -47,6 +57,16 @@ const deleteTodo = (id) => {
   {todos.map((todo) => (
     <li key={todo.id}>
       {todo.text}
+
+        <span
+    onClick={() => toggleTodo(todo.id)}
+    style={{
+      textDecoration: todo.completed ? "line-through" : "none",
+      cursor: "pointer",
+    }}
+  >
+    {todo.text}
+  </span>
 
       <button onClick ={ ()=> deleteTodo(todo.id)}>
        Delete
