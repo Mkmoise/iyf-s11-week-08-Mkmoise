@@ -24,6 +24,10 @@ const addTodo = () => {
   setInputValue("");
 };
 
+const deleteTodo = (id) => {
+  setTodos(todos.filter((todo) => todo.id !== id));
+};
+
   return (
     <div>
       <h2>Todo List</h2>
@@ -43,7 +47,12 @@ const addTodo = () => {
   {todos.map((todo) => (
     <li key={todo.id}>
       {todo.text}
-    </li>
+
+      <button onClick ={ ()=> deleteTodo(todo.id)}>
+       Delete
+      </button>
+  
+  </li>
   ))}
 </ul>
 
