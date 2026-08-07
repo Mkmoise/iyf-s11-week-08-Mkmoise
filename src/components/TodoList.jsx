@@ -1,10 +1,52 @@
 import { useState } from "react";
 
 function TodoList() {
+
+const [todos, setTodos] = useState([
+  { id: 1, text: "Learn React", completed: false },
+  { id: 2, text: "Build a project", completed: false }
+]);
+
+const [inputValue, setInputValue] = useState("");
+
+const addTodo = () => {
+  if (!inputValue.trim()) return;
+
+  setTodos([
+    ...todos,
+    {
+      id: Date.now(),
+      text: inputValue,
+      completed: false,
+    },
+  ]);
+
+  setInputValue("");
+};
+
   return (
     <div>
       <h2>Todo List</h2>
-      <p>My Todo List component is working!</p>
+       
+       <input
+  type="text"
+  placeholder="Enter a new task"
+  value={inputValue}
+  onChange={(e) => setInputValue(e.target.value)}
+/>
+
+<button onClick={addTodo}>
+  Add Todo
+</button>  
+
+     <ul>
+  {todos.map((todo) => (
+    <li key={todo.id}>
+      {todo.text}
+    </li>
+  ))}
+</ul>
+
     </div>
   );
 }
