@@ -56,7 +56,6 @@ const toggleTodo = (id) => {
      <ul>
   {todos.map((todo) => (
     <li key={todo.id}>
-      {todo.text}
 
         <span
     onClick={() => toggleTodo(todo.id)}
